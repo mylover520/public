@@ -1,6 +1,6 @@
 <!--
 //
-// ¡ö ßMÐÐ„Ó‘B°´âoˆD™nµÄÇÐ“Q„Ó×÷
+// â–  é€²è¡Œå‹•æ…‹æŒ‰éˆ•åœ–æª”çš„åˆ‡æ›å‹•ä½œ
 // 
 toggleKey = new Object();
 toggleKey[0] = "_off";
@@ -14,93 +14,93 @@ function imgChange(id,act){
 if(document.images){ document.images[id].src = eval("img." + id + toggleKey[act] + ".src");}
 }
 
-// ®”ß@¶Î³ÌÊ½´a‘ªÓÃµ½²¥·ÅÆ÷Ê¹ÓÃ•r£º
-// ÒÔº¯Ê½ imgChange('°´âo×R„eÃû·Q',0) ßMÐÐµÄ„Ó×÷¼´Ê¹ÓÃ "off" µÄˆD™n£»
-// ÒÔº¯Ê½ imgChange('°´âo×R„eÃû·Q',1) ßMÐÐµÄ„Ó×÷¼´Ê¹ÓÃ "on" µÄˆD™n¡£
+// ç•¶é€™æ®µç¨‹å¼ç¢¼æ‡‰ç”¨åˆ°æ’­æ”¾å™¨ä½¿ç”¨æ™‚ï¼š
+// ä»¥å‡½å¼ imgChange('æŒ‰éˆ•è­˜åˆ¥åç¨±',0) é€²è¡Œçš„å‹•ä½œå³ä½¿ç”¨ "off" çš„åœ–æª”ï¼›
+// ä»¥å‡½å¼ imgChange('æŒ‰éˆ•è­˜åˆ¥åç¨±',1) é€²è¡Œçš„å‹•ä½œå³ä½¿ç”¨ "on" çš„åœ–æª”ã€‚
 
-// ÏÂÃæµÄ²¿·Ý¾ÍÊÇÔO¶¨ "off" Åc "on" µÄ„Ó‘B°´âoˆD™n¡£
-// vmute, pmode, rept, playt, pauzt, stopt ß@Ð©¶¼ÊÇ¡¸°´âo×R„eÃû·Q¡¹¡£
+// ä¸‹é¢çš„éƒ¨ä»½å°±æ˜¯è¨­å®š "off" èˆ‡ "on" çš„å‹•æ…‹æŒ‰éˆ•åœ–æª”ã€‚
+// vmute, pmode, rept, playt, pauzt, stopt é€™äº›éƒ½æ˜¯ã€ŒæŒ‰éˆ•è­˜åˆ¥åç¨±ã€ã€‚
 
 if(document.images){
 img = new Object();
 
-// ¡¸ìoÒôÄ£Ê½¡¹°´âoµÄˆD™n (ÒÑêPé]£¯ÒÑé_†¢)
+// ã€ŒéœéŸ³æ¨¡å¼ã€æŒ‰éˆ•çš„åœ–æª” (å·²é—œé–‰ï¼å·²é–‹å•Ÿ)
 img.vmute_off = new Image();
-img.vmute_off.src = "img/btn_mute_off.gif";
+img.vmute_off.src = "https://cdn.jsdelivr.net/gh/mylover520/public@2.0/mp3-img/btn_mute_off.gif";
 img.vmute_on = new Image();
-img.vmute_on.src = "img/btn_mute_on.gif";
+img.vmute_on.src = "https://cdn.jsdelivr.net/gh/mylover520/public@2.0/mp3-img/btn_mute_on.gif";
 
-// ¡¸²¥·Åí˜ÐòÄ£Ê½¡¹°´âoµÄˆD™n (Ñ­Ðò£¯ëS™C)
+// ã€Œæ’­æ”¾é †åºæ¨¡å¼ã€æŒ‰éˆ•çš„åœ–æª” (å¾ªåºï¼éš¨æ©Ÿ)
 img.pmode_off = new Image();
-img.pmode_off.src = "img/btn_rndmode_off.gif";
+img.pmode_off.src = "https://cdn.jsdelivr.net/gh/mylover520/public@2.0/mp3-img/btn_rndmode_off.gif";
 img.pmode_on = new Image();
-img.pmode_on.src = "img/btn_rndmode_on.gif";
+img.pmode_on.src = "https://cdn.jsdelivr.net/gh/mylover520/public@2.0/mp3-img/btn_rndmode_on.gif";
 
-// ¡¸ÊÇ·ñÖØÑ}²¥·Å¡¹°´âoµÄˆD™n (²»ÖØÑ}£¯ÖØÑ})
+// ã€Œæ˜¯å¦é‡è¤‡æ’­æ”¾ã€æŒ‰éˆ•çš„åœ–æª” (ä¸é‡è¤‡ï¼é‡è¤‡)
 img.rept_off = new Image();
-img.rept_off.src = "img/btn_rept_off.gif";
+img.rept_off.src = "https://cdn.jsdelivr.net/gh/mylover520/public@2.0/mp3-img/btn_rept_off.gif";
 img.rept_on = new Image();
-img.rept_on.src = "img/btn_rept_on.gif";
+img.rept_on.src = "https://cdn.jsdelivr.net/gh/mylover520/public@2.0/mp3-img/btn_rept_on.gif";
 
-// ¡¸²¥·Å¡¹°´âoµÄˆD™n (·Ç²¥·ÅÖÐ£¯²¥·ÅÖÐ£¯»¬ÊóÒÆÖÁ•r)
+// ã€Œæ’­æ”¾ã€æŒ‰éˆ•çš„åœ–æª” (éžæ’­æ”¾ä¸­ï¼æ’­æ”¾ä¸­ï¼æ»‘é¼ ç§»è‡³æ™‚)
 img.playt_off = new Image();
-img.playt_off.src = "img/btn_play.gif";
+img.playt_off.src = "https://cdn.jsdelivr.net/gh/mylover520/public@2.0/mp3-img/btn_play.gif";
 img.playt_on = new Image();
-img.playt_on.src = "img/btn_play_on.gif";
+img.playt_on.src = "https://cdn.jsdelivr.net/gh/mylover520/public@2.0/mp3-img/btn_play_on.gif";
 img.playt_ovr = new Image();
-img.playt_ovr.src = "img/btn_play_ovr.gif";
+img.playt_ovr.src = "https://cdn.jsdelivr.net/gh/mylover520/public@2.0/mp3-img/btn_play_ovr.gif";
 
-// ¡¸•ºÍ£¡¹°´âoµÄˆD™n (·Ç•ºÍ£ÖÐ£¯•ºÍ£ÖÐ£¯»¬ÊóÒÆÖÁ•r)
+// ã€Œæš«åœã€æŒ‰éˆ•çš„åœ–æª” (éžæš«åœä¸­ï¼æš«åœä¸­ï¼æ»‘é¼ ç§»è‡³æ™‚)
 img.pauzt_off = new Image();
-img.pauzt_off.src = "img/btn_pauz_off.gif";
+img.pauzt_off.src = "https://cdn.jsdelivr.net/gh/mylover520/public@2.0/mp3-img/btn_pauz_off.gif";
 img.pauzt_on = new Image();
-img.pauzt_on.src = "img/btn_pauz_on.gif";
+img.pauzt_on.src = "https://cdn.jsdelivr.net/gh/mylover520/public@2.0/mp3-img/btn_pauz_on.gif";
 img.pauzt_ovr = new Image();
-img.pauzt_ovr.src = "img/btn_pauz_ovr.gif";
+img.pauzt_ovr.src = "https://cdn.jsdelivr.net/gh/mylover520/public@2.0/mp3-img/btn_pauz_ovr.gif";
 
-// ¡¸Í£Ö¹¡¹°´âoµÄˆD™n (Î´±»Í£Ö¹£¯ÒÑÍ£Ö¹£¯»¬ÊóÒÆÖÁ•r)
+// ã€Œåœæ­¢ã€æŒ‰éˆ•çš„åœ–æª” (æœªè¢«åœæ­¢ï¼å·²åœæ­¢ï¼æ»‘é¼ ç§»è‡³æ™‚)
 img.stopt_off = new Image();
-img.stopt_off.src = "img/btn_stop.gif";
+img.stopt_off.src = "https://cdn.jsdelivr.net/gh/mylover520/public@2.0/mp3-img/btn_stop.gif";
 img.stopt_on = new Image();
-img.stopt_on.src = "img/btn_stop_on.gif";
+img.stopt_on.src = "https://cdn.jsdelivr.net/gh/mylover520/public@2.0/mp3-img/btn_stop_on.gif";
 img.stopt_ovr = new Image();
-img.stopt_ovr.src = "img/btn_stop_ovr.gif";
+img.stopt_ovr.src = "https://cdn.jsdelivr.net/gh/mylover520/public@2.0/mp3-img/btn_stop_ovr.gif";
 
-// ¡¸ÉÏÒ»Ê×ÇúÄ¿¡¹°´âoµÄˆD™n (Ò»°ãï@Ê¾£¯»¬ÊóÒÆÖÁ•r)
+// ã€Œä¸Šä¸€é¦–æ›²ç›®ã€æŒ‰éˆ•çš„åœ–æª” (ä¸€èˆ¬é¡¯ç¤ºï¼æ»‘é¼ ç§»è‡³æ™‚)
 img.prevt_out = new Image();
-img.prevt_out.src = "img/btn_prev.gif";
+img.prevt_out.src = "https://cdn.jsdelivr.net/gh/mylover520/public@2.0/mp3-img/btn_prev.gif";
 img.prevt_ovr = new Image();
-img.prevt_ovr.src = "img/btn_prev_ovr.gif";
+img.prevt_ovr.src = "https://cdn.jsdelivr.net/gh/mylover520/public@2.0/mp3-img/btn_prev_ovr.gif";
 
-// ¡¸ÏÂÒ»Ê×ÇúÄ¿¡¹°´âoµÄˆD™n (Ò»°ãï@Ê¾£¯»¬ÊóÒÆÖÁ•r)
+// ã€Œä¸‹ä¸€é¦–æ›²ç›®ã€æŒ‰éˆ•çš„åœ–æª” (ä¸€èˆ¬é¡¯ç¤ºï¼æ»‘é¼ ç§»è‡³æ™‚)
 img.nextt_out = new Image();
-img.nextt_out.src = "img/btn_next.gif";
+img.nextt_out.src = "https://cdn.jsdelivr.net/gh/mylover520/public@2.0/mp3-img/btn_next.gif";
 img.nextt_ovr = new Image();
-img.nextt_ovr.src = "img/btn_next_ovr.gif";
+img.nextt_ovr.src = "https://cdn.jsdelivr.net/gh/mylover520/public@2.0/mp3-img/btn_next_ovr.gif";
 
-// ¡¸Ôö¼ÓÒôÁ¿¡¹°´âoµÄˆD™n (Ò»°ãï@Ê¾£¯»¬ÊóÒÆÖÁ•r)
+// ã€Œå¢žåŠ éŸ³é‡ã€æŒ‰éˆ•çš„åœ–æª” (ä¸€èˆ¬é¡¯ç¤ºï¼æ»‘é¼ ç§»è‡³æ™‚)
 img.vup_out = new Image();
-img.vup_out.src = "img/btn_vup.gif";
+img.vup_out.src = "https://cdn.jsdelivr.net/gh/mylover520/public@2.0/mp3-img/btn_vup.gif";
 img.vup_ovr = new Image();
-img.vup_ovr.src = "img/btn_vup_ovr.gif";
+img.vup_ovr.src = "https://cdn.jsdelivr.net/gh/mylover520/public@2.0/mp3-img/btn_vup_ovr.gif";
 
-// ¡¸œpÉÙÒôÁ¿¡¹°´âoµÄˆD™n (Ò»°ãï@Ê¾£¯»¬ÊóÒÆÖÁ•r)
+// ã€Œæ¸›å°‘éŸ³é‡ã€æŒ‰éˆ•çš„åœ–æª” (ä¸€èˆ¬é¡¯ç¤ºï¼æ»‘é¼ ç§»è‡³æ™‚)
 img.vdn_out = new Image();
-img.vdn_out.src = "img/btn_vdn.gif";
+img.vdn_out.src = "https://cdn.jsdelivr.net/gh/mylover520/public@2.0/mp3-img/btn_vdn.gif";
 img.vdn_ovr = new Image();
-img.vdn_ovr.src = "img/btn_vdn_ovr.gif";
+img.vdn_ovr.src = "https://cdn.jsdelivr.net/gh/mylover520/public@2.0/mp3-img/btn_vdn_ovr.gif";
 
-// ¡¸ï@Ê¾²¥·ÅÇå†ÎƒÈÈÝ¡¹°´âoµÄˆD™n (Ò»°ãï@Ê¾£¯»¬ÊóÒÆÖÁ•r)
+// ã€Œé¡¯ç¤ºæ’­æ”¾æ¸…å–®å…§å®¹ã€æŒ‰éˆ•çš„åœ–æª” (ä¸€èˆ¬é¡¯ç¤ºï¼æ»‘é¼ ç§»è‡³æ™‚)
 img.plist_out = new Image();
-img.plist_out.src = "img/btn_plist.gif";
+img.plist_out.src = "https://cdn.jsdelivr.net/gh/mylover520/public@2.0/mp3-img/btn_plist.gif";
 img.plist_ovr = new Image();
-img.plist_ovr.src = "img/btn_plist_ovr.gif";
+img.plist_ovr.src = "https://cdn.jsdelivr.net/gh/mylover520/public@2.0/mp3-img/btn_plist_ovr.gif";
 
-// ï@Ê¾²¥·Å î‘BµÄ Scope „Ó‘BˆD™n (ìoÖ¹£¯ÞD„Ó)
+// é¡¯ç¤ºæ’­æ”¾ç‹€æ…‹çš„ Scope å‹•æ…‹åœ–æª” (éœæ­¢ï¼è½‰å‹•)
 img.scope_off = new Image();
-img.scope_off.src = "img/scope_off.gif";
+img.scope_off.src = "https://cdn.jsdelivr.net/gh/mylover520/public@2.0/mp3-img/scope_off.gif";
 img.scope_on = new Image();
-img.scope_on.src = "img/scope_on.gif";
+img.scope_on.src = "https://cdn.jsdelivr.net/gh/mylover520/public@2.0/mp3-img/scope_on.gif";
 
 }
 
